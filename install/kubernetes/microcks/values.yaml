@@ -265,6 +265,13 @@ features:
         #kubernetes.io/ingress.class: nginx
       generateCert: true
 
+  java:
+    truststore:
+      install: true
+      truststoreSecretRef:
+        secret: aws-ca-cert
+        passwordKey: changeit
+
   repositoryFilter:
     enabled: false
     labelKey: app
